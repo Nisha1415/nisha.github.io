@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nisha Poojary - Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Animate on Scroll (AOS) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9f9fb, #f3f2f8);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      font-size: 2rem;
+      font-weight: 700;
+      background: #3a3a55;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #4a4a65;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #b57edc; /* Lavender */
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #b57edc;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+    /* Intro Section */
+.intro {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f4fc, #ffffff);
+}
+
+.intro-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.intro-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text .name {
+  background: linear-gradient(90deg, #a66cff, #b57edc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text h2 {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 1rem;
+  height: 30px; /* to keep stable height during typing */
+}
+
+.intro-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.intro-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #a66cff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #924dff;
+}
+
+.btn.secondary {
+  border: 2px solid #a66cff;
+  color: #a66cff;
+}
+
+.btn.secondary:hover {
+  background: #a66cff;
+  color: #fff;
+}
+
+.intro-image img {
+  width: 220px;   /* adjust size as you like */
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%; /* makes it circular */
+  border: 4px solid #a66cff; /* theme border */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+.intro h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.role {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  color: #fff;
+  background: #6a5acd; /* slate blue theme */
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.social-buttons a:hover {
+  background: #483d8b; /* darker on hover */
+}
+
+.resume-btn {
+  background: #9370db; /* lavender purple */
+}
+
+.resume-btn:hover {
+  background: #7b68ee;
+}
+
+
+    .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      background: #b57edc; /* Lavender */
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .buttons a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 15px rgba(181, 126, 220, 0.5);
+    }
+
+    section {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #343a40;
+      position: relative;
+      display: inline-block;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60%;
+      margin: 0.5rem auto 0;
+      height: 3px;
+      background: #b57edc; /* Lavender accent */
+    }
+
+    .skills-container, .projects, .education-container, .certificates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card, .card, .edu-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover, .card:hover, .edu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .skill-card i {
+      font-size: 2rem;
+      color: #b57edc; /* Lavender */
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-card img {
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: #b57edc; /* Lavender */
+      box-shadow: 0 0 8px rgba(181,126,220,0.3);
+      outline: none;
+    }
+
+    .contact-form button {
+      padding: 0.8rem;
+      border: none;
+      background: #b57edc; /* Lavender */
+      color: white;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #9f6bc4;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #3a3a55;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+}
+
+.certificate-card h3 {
+  font-size: 1rem;
+  margin: 12px 10px;
+  color: #333;
+  min-height: 50px;
+}
+
+.certificate-card a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #b57edc;
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.certificate-card a:hover {
+  background: #9f6bc4;
+}
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.edu-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  border-top: 5px solid #b57edc; /* Lavender accent bar */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(181, 126, 220, 0.25);
+}
+
+.edu-logo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #f3f0fa; /* subtle lavender background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.edu-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.edu-card .college {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.edu-card .year {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #b57edc;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: #f8f4fc;
+  border-radius: 12px;
+}
+
+.intro-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn.primary {
+  background: #a66cff;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #924dff;
+}
+
+.btn.secondary {
+  border: 2px solid #a66cff;
+  color: #a66cff;
+}
+
+.btn.secondary:hover {
+  background: #a66cff;
+  color: #fff;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>My Portfolio</header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+<!-- Intro Section -->
+<section id="intro" class="intro">
+  <div class="intro-container">
+    
+    <!-- Left: Text -->
+    <div class="intro-text" data-aos="fade-right">
+      <h1>Hello, I'm <span class="name">Nisha</span> 👋</h1>
+      <h2>
+        <span class="typing"></span>
+      </h2>
+      <p>
+        Passionate MCA student with strong skills in full-stack development,
+        problem-solving, and AI-powered applications. I love building clean,
+        scalable, and user-friendly solutions.
+      </p>
+      <div class="intro-buttons">
+        <a href="D:\My_Portfolio\images\resume.pdf" class="btn primary" download>📄 Resume</a>
+        <a href="https://github.com/yourusername" target="_blank" class="btn secondary">💻 GitHub</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="btn secondary">🔗 LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- Right: Profile Image -->
+    <div class="intro-image" data-aos="fade-left">
+      <img src="images/profile.png" alt="Nisha Profile">
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+
+  <!-- About -->
+  <section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>Passionate MCA student with hands-on experience in modern web technologies, eager to build a career in full-stack development. Committed to delivering efficient, user-centric applications while continuously learning and contributing to innovative projects.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card"><i class="fab fa-html5"></i><p>HTML</p></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+      <div class="skill-card"><i class="fab fa-js"></i><p>JavaScript</p></div>
+      <div class="skill-card"><i class="fab fa-react"></i><p>React</p></div>
+      <div class="skill-card"><i class="fas fa-database"></i><p>MySQL</p></div>
+      <div class="skill-card"><i class="fas fa-leaf"></i><p>MongoDB</p></div>
+      <div class="skill-card"><i class="fab fa-java"></i><p>Java</p></div>
+      <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
+      <div class="skill-card"><i class="fab fa-php"></i><p>PHP</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" data-aos="fade-up">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card"><h3>Tailors Touch Virtual Try-On</h3><p>AI-powered fashion platform enabling personalized dress selection & real-time virtual try-on.</p><a href="https://github.com/Nisha1415/Tailors-Touch" target="_blank">🔗 GitHub</a></div>
+      <div class="card"><h3>Face Detection System</h3><p>Real-time face detection using Python & OpenCV with Haar cascade classifiers.</p><a href="https://github.com/Nisha1415/Face-Detection-Haarcascade--classifiers" target="_blank">🔗 GitHub</a></div>
+      <div class="card"><h3>Secure Authentication System</h3><p>MERN stack authentication with OTP, bcrypt, JWT, and email verification.</p><a href="https://github.com/Nisha1415/PRODIGY_FS_01" target="_blank">🔗 GitHub</a></div>
+      <div class="card"><h3>Employee Management System</h3><p>Flask-based CRUD system with Python, SQLAlchemy, and HTML/CSS.</p><a href="https://github.com/Nisha1415/PRODIGY_FS_02" target="_blank">🔗 GitHub</a></div>
+    </div>
+  </section>
+
+ <!-- Education -->
+<section id="education" data-aos="fade-up">
+  <h2>Education</h2>
+  <div class="education-container">
+
+    <!-- MCA -->
+    <div class="edu-card">
+      <div class="edu-logo">
+        <img src="images/nittelogo.png" alt="NMAMIT Logo">
+      </div>
+      <h3>Master of Computer Applications</h3>
+      <p class="college">NMAM Institute of Technology, Nitte</p>
+      <span class="year">2024 – 2026</span>
+    </div>
+
+    <!-- BCA -->
+    <div class="edu-card">
+      <div class="edu-logo">
+        <img src="images/canaralogo.png" alt="Canara College Logo">
+      </div>
+      <h3>Bachelor of Computer Applications</h3>
+      <p class="college">Canara College, Mangaluru</p>
+      <span class="year">2021 – 2024</span>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Certificates -->
+<section id="certificates" data-aos="fade-up">
+  <h2>Certificates</h2>
+  <div class="certificates">
+    
+    <!-- Certificate Card -->
+    <div class="certificate-card">
+      <img src="images/COA.jpg" alt="Computer Architecture Certificate">
+      <h3><i class="fa fa-certificate" style="color:#b57edc;"></i> Computer Architecture & Organization (Udemy)</h3>
+      <a href="images/COA.jpg" target="_blank"><i class="fa fa-external-link"></i> View</a>
+    </div>
+
+    <div class="certificate-card">
+      <img src="images/MONGODB.jpg" alt="MongoDB Certificate">
+      <h3><i class="fa fa-certificate" style="color:#b57edc;"></i> MongoDB Developer’s Guide (Udemy)</h3>
+      <a href="images/MONGODB.jpg" target="_blank"><i class="fa fa-external-link"></i> View</a>
+    </div>
+
+    <div class="certificate-card">
+      <img src="images/flutter.jpg" alt="Flutter Workshop Certificate">
+      <h3><i class="fa fa-certificate" style="color:#b57edc;"></i> Flutter Workshop</h3>
+      <a href="images/flutter.jpg" target="_blank"><i class="fa fa-external-link"></i> View</a>
+    </div>
+
+    <div class="certificate-card">
+      <img src="images/GOG.jpg" alt="Data Science Bootcamp Certificate">
+      <h3><i class="fa fa-certificate" style="color:#b57edc;"></i> Data Science BootCamp (GeeksForGeeks)</h3>
+      <a href="images/GOG.jpg" target="_blank"><i class="fa fa-external-link"></i> View</a>
+    </div>
+
+    <div class="certificate-card">
+      <img src="images/cloudcomputing.jpg" alt="Cloud Computing Certificate">
+      <h3><i class="fa fa-certificate" style="color:#b57edc;"></i> Cloud Computing</h3>
+      <a href="images/cloudcomputing.jpg" target="_blank"><i class="fa fa-external-link"></i> View</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Nisha P Poojary</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
